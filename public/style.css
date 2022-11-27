@@ -15,3 +15,7 @@
 ul {
   list-style: none;
 }
+
+#answers-list {
+  border: solid red 1px;
+}
