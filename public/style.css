@@ -19,3 +19,7 @@ ul {
 #answers-list {
   border: solid red 1px;
 }
+
+.fake-class {
+  color: blue;
+}
