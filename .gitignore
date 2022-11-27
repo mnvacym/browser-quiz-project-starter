@@ -1,3 +1,7 @@
 node_modules
 .idea
+<<<<<<< HEAD
 .DS_Store
+=======
+.vscode
+>>>>>>> 63f2a5e (vscode gitignore)
