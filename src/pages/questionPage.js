@@ -30,37 +30,49 @@ export const initQuestionPage = () => {
 
     const correctAnswer = quizData.questions[quizData.currentQuestionIndex].correct;
 
-    $(document).ready(function () {
-      $('li').click(function () {
-        //set the color of list items default
-        const liElements = document.getElementsByTagName('li');
-        for (let i = 0; i < liElements.length; i++) {
-          liElements[i].style.color = 'black';
-          liElements[i].style.fontWeight = "normal";
-        }
-      });
-    });
 
-    $(document).ready(function () {
-      $('li').click(function () {
-        //Get the id of selected list item
-        const selectedAnswer = $(this).attr('id');
+  const liElements = document.getElementsByTagName('li');
+  for (let i = 0; i < liElements.length; i++) {
 
-        //set the styles of selected list item
-        document.getElementById(selectedAnswer).style.fontWeight = "bolder";
+   liElements[i].addEventListener('click', ()=>{
+    console.log(liElements[i]);
+    console.log(liElements[i].id);
 
-        //check the answer 
-        if (correctAnswer === selectedAnswer) {
-          document.getElementById(selectedAnswer).style.color = "green";
-        }
-        else
-        {
-          document.getElementById(selectedAnswer).style.color = "red";
-        }
-        quizData.questions[quizData.currentQuestionIndex].selected = true;
-      });
-    });
+   })
+  }
+   
+    // $(document).ready(function () {
+    //   $('li').click(function () {
+    //     //set the color of list items default
+    //     const liElements = document.getElementsByTagName('li');
+    //     for (let i = 0; i < liElements.length; i++) {
+    //       liElements[i].style.color = 'black';
+    //       liElements[i].style.fontWeight = "normal";
+    //     }
+    //   });
+    // });
+
+    // $(document).ready(function () {
+    //   $('li').click(function () {
+    //     //Get the id of selected list item
+    //     const selectedAnswer = $(this).attr('id');
+
+    //     //set the styles of selected list item
+    //     document.getElementById(selectedAnswer).style.fontWeight = "bolder";
+
+    //     //check the answer 
+    //     if (correctAnswer === selectedAnswer) {
+    //       document.getElementById(selectedAnswer).style.color = "green";
+    //     }
+    //     else
+    //     {
+    //       document.getElementById(selectedAnswer).style.color = "red";
+    //     }
+    //     quizData.questions[quizData.currentQuestionIndex].selected = true;
+    //   });
+    // });
   };
+
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
 
