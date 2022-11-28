@@ -25,77 +25,24 @@ export const initQuestionPage = () => {
     answerElement.addEventListener('click', showAnswer);
 
     function showAnswer() {
-      
+      //check if answer is already given do not make any thing
       if (currentQuestion.selected !== true) {
         currentQuestion.selected = true;
         if (currentQuestion.correct === key) {
-          // if the answer is Correct, the answer will turn Green
-          answerElement.style.color = 'green'; //>>> To be replaced with Css Styling when ready // answerElement.className = '.correct'
+          // 1. if the answer is Correct, the answer will turn Green
+        answerElement.style.color = 'green'; //>>> To be replaced with Css Styling when ready // answerElement.className = '.correct'
         } else {
-          // if the answer is Wrong, the answer will turn Red
-          answerElement.style.color = 'red'; //>>> To be replaced with Css Styling when ready // answerElement.className = '.wrong'
+          // 1. if the answer is Wrong, the answer will turn Red
+        answerElement.style.color = 'red'; //>>> To be replaced with Css Styling when ready // answerElement.className = '.wrong'
         }
       }
     }
-   
   }
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestion);
 
-  // const correctAnswer =
-  //   quizData.questions[quizData.currentQuestionIndex].correct;
-
-  // const liElements = document.getElementsByTagName('li');
-
-  // for (let i = 0; i < liElements.length; i++) {
-  //   const selectedAnswer = liElements[i].id;
-  //   liElements[i].addEventListener('click', () => {
-  //     if (correctAnswer === selectedAnswer) {
-        
-  //       //document.getElementById(selectedAnswer).className = "correct";
-  //       // that code above will uncomment after vladimir done
-  //       document.getElementById(selectedAnswer).style.color = "green";
-  //     }
-  //     else {
-  //       //document.getElementById(selectedAnswer).className = "correct";
-  //       // that code above will uncomment after vladimir done
-  //       document.getElementById(selectedAnswer).style.color = "red";
-  //     }
-  //   });
-  // }
-
-  // $(document).ready(function () {
-  //   $('li').click(function () {
-  //     //set the color of list items default
-  //     const liElements = document.getElementsByTagName('li');
-  //     for (let i = 0; i < liElements.length; i++) {
-  //       liElements[i].style.color = 'black';
-  //       liElements[i].style.fontWeight = "normal";
-  //     }
-  //   });
-  // });
-
-  // $(document).ready(function () {
-  //   $('li').click(function () {
-  //     //Get the id of selected list item
-  //     const selectedAnswer = $(this).attr('id');
-
-  //     //set the styles of selected list item
-  //     document.getElementById(selectedAnswer).style.fontWeight = "bolder";
-
-  //     //check the answer
-  //     if (correctAnswer === selectedAnswer) {
-  //       document.getElementById(selectedAnswer).style.color = "green";
-  //     }
-  //     else
-  //     {
-  //       document.getElementById(selectedAnswer).style.color = "red";
-  //     }
-  //     quizData.questions[quizData.currentQuestionIndex].selected = true;
-  //   });
-  // });
 };
 
 const nextQuestion = () => {
