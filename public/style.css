@@ -74,7 +74,13 @@ li:hover {
   color: #4fa854;
 }
 
+<<<<<<< ours
 .wrong {
   text-decoration: line-through;
   color: #ea4535;
 }
+=======
+#answers-list {
+  border: solid red 1px;
+}
+>>>>>>> theirs
