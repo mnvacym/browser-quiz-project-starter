@@ -22,32 +22,49 @@ export const initQuestionPage = () => {
   for (const [key, answerText] of Object.entries(currentQuestion.answers)) {
     const answerElement = createAnswerElement(key, answerText);
     answersListElement.appendChild(answerElement);
+    answerElement.addEventListener('click', showAnswer);
+
+    function showAnswer() {
+      
+      if (currentQuestion.selected !== true) {
+        currentQuestion.selected = true;
+        if (currentQuestion.correct === key) {
+          // if the answer is Correct, the answer will turn Green
+          answerElement.style.color = 'green'; //>>> To be replaced with Css Styling when ready // answerElement.className = '.correct'
+        } else {
+          // if the answer is Wrong, the answer will turn Red
+          answerElement.style.color = 'red'; //>>> To be replaced with Css Styling when ready // answerElement.className = '.wrong'
+        }
+      }
+    }
+   
   }
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestion);
 
-  const correctAnswer =
-    quizData.questions[quizData.currentQuestionIndex].correct;
+  // const correctAnswer =
+  //   quizData.questions[quizData.currentQuestionIndex].correct;
 
-  const liElements = document.getElementsByTagName('li');
-  const selectedAnswer = liElements[i].id
-  for (let i = 0; i < liElements.length; i++) {
-    liElements[i].addEventListener('click', () => {
-      if (correctAnswer === selectedAnswer) {
+  // const liElements = document.getElementsByTagName('li');
+
+  // for (let i = 0; i < liElements.length; i++) {
+  //   const selectedAnswer = liElements[i].id;
+  //   liElements[i].addEventListener('click', () => {
+  //     if (correctAnswer === selectedAnswer) {
         
-        //document.getElementById(selectedAnswer).className = "correct";
-        // that code above will uncomment after vladimir done
-        document.getElementById(selectedAnswer).style.color = "green";
-      }
-      else {
-        //document.getElementById(selectedAnswer).className = "correct";
-        // that code above will uncomment after vladimir done
-        document.getElementById(selectedAnswer).style.color = "red";
-      }
-    });
-  }
+  //       //document.getElementById(selectedAnswer).className = "correct";
+  //       // that code above will uncomment after vladimir done
+  //       document.getElementById(selectedAnswer).style.color = "green";
+  //     }
+  //     else {
+  //       //document.getElementById(selectedAnswer).className = "correct";
+  //       // that code above will uncomment after vladimir done
+  //       document.getElementById(selectedAnswer).style.color = "red";
+  //     }
+  //   });
+  // }
 
   // $(document).ready(function () {
   //   $('li').click(function () {
