@@ -32,10 +32,20 @@ export const initQuestionPage = () => {
     quizData.questions[quizData.currentQuestionIndex].correct;
 
   const liElements = document.getElementsByTagName('li');
+  const selectedAnswer = liElements[i].id
   for (let i = 0; i < liElements.length; i++) {
     liElements[i].addEventListener('click', () => {
-      console.log(liElements[i]);
-      console.log(liElements[i].id);
+      if (correctAnswer === selectedAnswer) {
+        
+        //document.getElementById(selectedAnswer).className = "correct";
+        // that code above will uncomment after vladimir done
+        document.getElementById(selectedAnswer).style.color = "green";
+      }
+      else {
+        //document.getElementById(selectedAnswer).className = "correct";
+        // that code above will uncomment after vladimir done
+        document.getElementById(selectedAnswer).style.color = "red";
+      }
     });
   }
 
