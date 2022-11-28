@@ -76,7 +76,7 @@ export const quizData = {
       ],
     },
     {
-      text: "In which country is H0 H0 H0 Santa’s postcode?",
+      text: 'In which country is H0 H0 H0 Santa’s postcode?',
       answers: {
         a: 'Norway',
         b: 'Australia',
@@ -87,7 +87,8 @@ export const quizData = {
       links: [
         {
           text: 'Santa is real!',
-          href: 'https://www.ndtv.com/offbeat/santa-is-real-postal-code-is-h0h-0h0-canada-defends-the-myth-544115',
+          href:
+            'https://www.ndtv.com/offbeat/santa-is-real-postal-code-is-h0h-0h0-canada-defends-the-myth-544115',
         },
         {
           text: 'empty',
@@ -107,7 +108,8 @@ export const quizData = {
       links: [
         {
           text: 'Does Volkswagen Manufacture Anything besides Vehicles?',
-          href: 'https://www.aboutmechanics.com/does-volkswagen-manufacture-anything-besides-cars.htm',
+          href:
+            'https://www.aboutmechanics.com/does-volkswagen-manufacture-anything-besides-cars.htm',
         },
         {
           text: 'empty',
@@ -127,7 +129,8 @@ export const quizData = {
       links: [
         {
           text: 'Wikipedia. Speed limit.',
-          href: 'https://en.wikipedia.org/wiki/Speed_limit?fbclid=IwAR0KyizR-Dwfkj89fNfz3K9mBbWv8kQkS0rkRdSivBNL3go2PlkspjSzfOo#History',
+          href:
+            'https://en.wikipedia.org/wiki/Speed_limit?fbclid=IwAR0KyizR-Dwfkj89fNfz3K9mBbWv8kQkS0rkRdSivBNL3go2PlkspjSzfOo#History',
         },
         {
           text: 'empty',
@@ -176,7 +179,8 @@ export const quizData = {
       ],
     },
     {
-      text: 'What did pirates wear because they were believed to improve their eyesight?',
+      text:
+        'What did pirates wear because they were believed to improve their eyesight?',
       answers: {
         a: 'A Hat',
         b: 'Earings',
@@ -187,7 +191,8 @@ export const quizData = {
       links: [
         {
           text: 'The traditional pirates stereotypes',
-          href: 'https://www.optimax.co.uk/blog/pirates-believe-earrings-improved-eyesight/',
+          href:
+            'https://www.optimax.co.uk/blog/pirates-believe-earrings-improved-eyesight/',
         },
         {
           text: 'empty',
@@ -196,7 +201,8 @@ export const quizData = {
       ],
     },
     {
-      text: 'How many calories would you burn if you bang your head against a wall for one hour?',
+      text:
+        'How many calories would you burn if you bang your head against a wall for one hour?',
       answers: {
         a: '50',
         b: '150',
@@ -207,7 +213,8 @@ export const quizData = {
       links: [
         {
           text: 'Factzpedia',
-          href: 'https://www.factzpedia.com/2021/03/banging-your-head-against-wall-for-one.html',
+          href:
+            'https://www.factzpedia.com/2021/03/banging-your-head-against-wall-for-one.html',
         },
         {
           text: 'empty',
@@ -227,7 +234,8 @@ export const quizData = {
       links: [
         {
           text: 'Wikipedia',
-          href: 'https://en.wikipedia.org/wiki/Pyramid#:~:text=While%20pyramids%20are%20associated%20with,queens%20of%20Napata%20and%20Mero%C3%AB.',
+          href:
+            'https://en.wikipedia.org/wiki/Pyramid#:~:text=While%20pyramids%20are%20associated%20with,queens%20of%20Napata%20and%20Mero%C3%AB.',
         },
         {
           text: 'empty',
@@ -247,7 +255,8 @@ export const quizData = {
       links: [
         {
           text: 'National Geographic',
-          href: "https://www.nationalgeographic.com/culture/article/are-french-fries-truly-french#:~:text=It's%20said%20that%20this%20dish,tasty%20potatoes%20%E2%80%9CFrench%E2%80%9D%20fries.",
+          href:
+            "https://www.nationalgeographic.com/culture/article/are-french-fries-truly-french#:~:text=It's%20said%20that%20this%20dish,tasty%20potatoes%20%E2%80%9CFrench%E2%80%9D%20fries.",
         },
         {
           text: 'empty',
