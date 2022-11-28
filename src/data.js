@@ -28,7 +28,7 @@ export const quizData = {
           href: 'https://javascript.info/variables',
         },
         {
-          text: 'Tyler McGinnis',
+          text: 'Tyler McGinnings',
           href: 'https://ui.dev/var-let-const/',
         },
       ],
