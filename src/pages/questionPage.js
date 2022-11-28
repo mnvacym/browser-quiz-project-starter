@@ -29,7 +29,6 @@ export const initQuestionPage = () => {
     .addEventListener('click', nextQuestion);
 
     const correctAnswer = quizData.questions[quizData.currentQuestionIndex].correct;
-  while (quizData.questions[quizData.currentQuestionIndex].selected === null) {
 
     $(document).ready(function () {
       $('li').click(function () {
@@ -46,27 +45,22 @@ export const initQuestionPage = () => {
       $('li').click(function () {
         //Get the id of selected list item
         const selectedAnswer = $(this).attr('id');
+
         //set the styles of selected list item
         document.getElementById(selectedAnswer).style.fontWeight = "bolder";
-        
-
 
         //check the answer 
         if (correctAnswer === selectedAnswer) {
           document.getElementById(selectedAnswer).style.color = "green";
         }
         else
-        {document.getElementById(selectedAnswer).style.color = "red";}
-          
-
-       
-        
+        {
+          document.getElementById(selectedAnswer).style.color = "red";
+        }
         quizData.questions[quizData.currentQuestionIndex].selected = true;
       });
     });
-    
   };
-}
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
 
