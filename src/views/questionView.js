@@ -15,6 +15,8 @@ export const createQuestionElement = (question) => {
     <ul id="${ANSWERS_LIST_ID}">
     </ul>
 
+    <div id="links"></div>
+    
     <button id="${NEXT_QUESTION_BUTTON_ID}">
       Next question
     </button>

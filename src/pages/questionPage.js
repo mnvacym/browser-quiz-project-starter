@@ -6,6 +6,7 @@ import {
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
+import { createLinkElement } from '../views/linkView.js';
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -46,6 +47,13 @@ export const initQuestionPage = () => {
             }
           }
         }
+        currentQuestion.links.forEach((link) => {
+          console.log(link);
+          console.log(createLinkElement(link.href, link.text));
+          document
+            .getElementById('links')
+            .appendChild(createLinkElement(link.href, link.text));
+        });
       }
     }
   }

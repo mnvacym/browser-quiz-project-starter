@@ -14,48 +14,6 @@ export const quizData = {
   // the questions in the quiz
   questions: [
     {
-      text: 'What are the different ways to declare a JS variable?',
-      answers: {
-        a: 'constant, let, variable',
-        b: 'var, const, let, function',
-        c: 'var, let, const',
-      },
-      correct: 'c',
-      selected: null,
-      links: [
-        {
-          text: 'javascript.info',
-          href: 'https://javascript.info/variables',
-        },
-        {
-          text: 'Tyler McGinnings',
-          href: 'https://ui.dev/var-let-const/',
-        },
-      ],
-    },
-    {
-      text: 'What does `typeof` do?',
-      answers: {
-        a: 'changes the type of a primitive value',
-        b: 'returns a string describing the type of a value',
-        c: 'determines if a value is primitive',
-        d: 'can tell the difference between arrays and objects',
-      },
-      correct: 'b',
-      selected: null,
-      links: [
-        {
-          text: 'javascript.info',
-          href: 'https://javascript.info/types#type-typeof',
-        },
-        {
-          text: 'MDN',
-          href:
-            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof',
-        },
-      ],
-    },
-    {
       text: 'What is the name of the Twitter bird?',
       answers: {
         a: 'Nick',
@@ -70,8 +28,8 @@ export const quizData = {
           href: 'https://logo.com/blog/twitter-logo',
         },
         {
-          text: 'empty',
-          href: '#',
+          text: 'Twitter Logo: What Famous Bird Stands For',
+          href: '#https://www.logaster.com/blog/twitter-logo/',
         },
       ],
     },
@@ -91,8 +49,9 @@ export const quizData = {
             'https://www.ndtv.com/offbeat/santa-is-real-postal-code-is-h0h-0h0-canada-defends-the-myth-544115',
         },
         {
-          text: 'empty',
-          href: '#',
+          text: 'Wikipedia',
+          href:
+            'https://en.wikipedia.org/wiki/Postal_codes_in_Canada#:~:text=The%20postal%20code%20H0H%200H0,reads%20%22Ho%20ho%20ho%22.',
         },
       ],
     },
@@ -112,8 +71,9 @@ export const quizData = {
             'https://www.aboutmechanics.com/does-volkswagen-manufacture-anything-besides-cars.htm',
         },
         {
-          text: 'empty',
-          href: '#',
+          text: 'Wikipedia',
+          href:
+            'https://en.wikipedia.org/wiki/Volkswagen_currywurst#:~:text=Volkswagen%20currywurst%20is%20a%20brand,given%20away%20to%20Volkswagen%20customers.',
         },
       ],
     },
@@ -128,13 +88,13 @@ export const quizData = {
       selected: null,
       links: [
         {
-          text: 'Wikipedia. Speed limit.',
+          text: 'Wikipedia',
           href:
             'https://en.wikipedia.org/wiki/Speed_limit?fbclid=IwAR0KyizR-Dwfkj89fNfz3K9mBbWv8kQkS0rkRdSivBNL3go2PlkspjSzfOo#History',
         },
         {
-          text: 'empty',
-          href: '#',
+          text: 'Speed limits in Netherlands',
+          href: 'https://en.wikipedia.org/wiki/Speed_limits_in_the_Netherlands',
         },
       ],
     },
@@ -153,8 +113,8 @@ export const quizData = {
           href: 'https://en.wikipedia.org/wiki/Stapes',
         },
         {
-          text: 'empty',
-          href: '#',
+          text: 'Healthline',
+          href: 'https://www.healthline.com/human-body-maps/stapes-bone#1',
         },
       ],
     },
@@ -173,8 +133,9 @@ export const quizData = {
           href: 'https://en.wikipedia.org/wiki/Hawaiian_pizza',
         },
         {
-          text: 'empty',
-          href: '#',
+          text: 'BBC. Pineapple on pizza.',
+          href:
+            'https://www.bbc.co.uk/bitesize/articles/z2vftrd#:~:text=The%20origin%20of%20the%20Hawaiian&text=But%20the%20Hawaiian%20pizza%2C%20topped,Greek%20immigrant%20called%20Sam%20Panopoulos.',
         },
       ],
     },
@@ -195,8 +156,9 @@ export const quizData = {
             'https://www.optimax.co.uk/blog/pirates-believe-earrings-improved-eyesight/',
         },
         {
-          text: 'empty',
-          href: '#',
+          text: 'Livescience Article',
+          href:
+            'https://www.livescience.com/33099-why-did-pirates-wear-earrings-.html',
         },
       ],
     },
@@ -217,8 +179,9 @@ export const quizData = {
             'https://www.factzpedia.com/2021/03/banging-your-head-against-wall-for-one.html',
         },
         {
-          text: 'empty',
-          href: '#',
+          text: 'To find a help',
+          href:
+            'https://www.top10.com/online-therapy/rotw-comparison?utm_source=google&kw=online%20therapy&c=605504651975&t=search&p=&m=b&adpos=&dev=c&devmod=&mobval=0&network=g&campaignid=14456317350&adgroupid=135318380582&targetid=kwd-11476751&interest=&physical=9102997&feedid=&a=7977&ts=&topic=&gender=&age=&agerange=&audience=&gclid=Cj0KCQiA-JacBhC0ARIsAIxybyPJ6nd2DqL0OiMUHfsvl3Vr-uWat50XRSY16X-__uoGCWIltNPmr8waAvUuEALw_wcB',
         },
       ],
     },
@@ -238,8 +201,8 @@ export const quizData = {
             'https://en.wikipedia.org/wiki/Pyramid#:~:text=While%20pyramids%20are%20associated%20with,queens%20of%20Napata%20and%20Mero%C3%AB.',
         },
         {
-          text: 'empty',
-          href: '#',
+          text: 'Intro: Africa',
+          href: 'https://intro.africa/story/the-nubian-pyramids-of-sudan/',
         },
       ],
     },
@@ -259,8 +222,8 @@ export const quizData = {
             "https://www.nationalgeographic.com/culture/article/are-french-fries-truly-french#:~:text=It's%20said%20that%20this%20dish,tasty%20potatoes%20%E2%80%9CFrench%E2%80%9D%20fries.",
         },
         {
-          text: 'empty',
-          href: '#',
+          text: 'Wikipedia',
+          href: 'https://en.wikipedia.org/wiki/French_fries',
         },
       ],
     },
