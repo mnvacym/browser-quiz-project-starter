@@ -24,6 +24,7 @@ export const initQuestionPage = () => {
     answersListElement.appendChild(answerElement);
     answerElement.addEventListener('click', showAnswer);
 
+    // eslint-disable-next-line no-inner-declarations
     function showAnswer() {
       //check if answer is not given before
       if (currentQuestion.selected !== true) {
