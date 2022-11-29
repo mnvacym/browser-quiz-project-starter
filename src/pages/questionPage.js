@@ -36,12 +36,11 @@ export const initQuestionPage = () => {
           answerElement.style.color = 'red'; //>>> To be replaced with Css Styling when ready // answerElement.className = '.wrong'
 
           //get all li elements
-          const liElements = document.getElementsByTagName('li');
-          for (const element of liElements) {
+          for (const answer of currentQuestion.answers) {
             // check which one is correct answer
             if (key == currentQuestion.correct) {
               // show the correct answer
-              element.style.color = 'green';
+              answer.style.color = 'green';
             }
           }
         }
