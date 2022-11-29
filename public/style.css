@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .centered {
   position: fixed;
   top: 50%;
@@ -12,10 +21,60 @@
   overflow: auto;
 }
 
-ul {
-  list-style: none;
+h1 {
+  margin-bottom: 15%;
+  color: #455eb5;
+  font-size: 3rem;
 }
 
-#answers-list {
-  border: solid red 1px;
+button {
+  margin-top: 10%;
+  background-image: linear-gradient(
+    92.88deg,
+    #455eb5 9.16%,
+    #5643cc 43.89%,
+    #673fd7 64.72%
+  );
+  border-radius: 0.7rem;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 500;
+  height: 3rem;
+  padding: 0 1.7rem;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+ul {
+  list-style: none;
+  font-size: 1.7rem;
+  color: #333333;
+  text-align: left;
+}
+
+li {
+  border: solid #333333 2px;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+li::first-letter {
+  font-weight: bold;
+}
+
+li:hover {
+  border: solid #673fd7 2px;
+}
+
+.correct {
+  color: #4fa854;
+}
+
+.wrong {
+  text-decoration: line-through;
+  color: #ea4535;
 }
