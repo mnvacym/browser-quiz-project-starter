@@ -25,15 +25,25 @@ export const initQuestionPage = () => {
     answerElement.addEventListener('click', showAnswer);
 
     function showAnswer() {
-      //check if answer is already given do not make any thing
+      //check if answer is not given before
       if (currentQuestion.selected !== true) {
         currentQuestion.selected = true;
         if (currentQuestion.correct === key) {
           // 1. if the answer is Correct, the answer will turn Green
-        answerElement.style.color = 'green'; //>>> To be replaced with Css Styling when ready // answerElement.className = '.correct'
+          answerElement.style.color = 'green'; //>>> To be replaced with Css Styling when ready // answerElement.className = '.correct'
         } else {
           // 1. if the answer is Wrong, the answer will turn Red
-        answerElement.style.color = 'red'; //>>> To be replaced with Css Styling when ready // answerElement.className = '.wrong'
+          answerElement.style.color = 'red'; //>>> To be replaced with Css Styling when ready // answerElement.className = '.wrong'
+
+          //get all li elements
+          const liElements = document.getElementsByTagName('li');
+          for (const element of liElements) {
+            // check which one is correct answer
+            if (key == currentQuestion.correct) {
+              // show the correct answer
+              element.style.color = 'green';
+            }
+          }
         }
       }
     }
@@ -42,7 +52,6 @@ export const initQuestionPage = () => {
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestion);
-
 };
 
 const nextQuestion = () => {
