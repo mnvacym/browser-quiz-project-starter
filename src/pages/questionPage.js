@@ -30,10 +30,10 @@ export const initQuestionPage = () => {
         currentQuestion.selected = true;
         if (currentQuestion.correct === key) {
           // 1. if the answer is Correct, the answer will turn Green
-          answerElement.style.color = 'green'; //>>> To be replaced with Css Styling when ready // answerElement.className = '.correct'
+          answerElement.className = 'correct';
         } else {
           // 1. if the answer is Wrong, the answer will turn Red
-          answerElement.style.color = 'red'; //>>> To be replaced with Css Styling when ready // answerElement.className = '.wrong'
+          answerElement.className = 'wrong';
 
           //get all li elements
           const liElements = document.getElementsByTagName('li');
@@ -41,7 +41,7 @@ export const initQuestionPage = () => {
             // check which one is correct answer
             if (element.id == currentQuestion.correct) {
               // show the correct answer
-              element.style.color = 'green';
+              element.className = 'correct';
             }
           }
         }
