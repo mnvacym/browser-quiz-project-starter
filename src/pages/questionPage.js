@@ -28,6 +28,23 @@ export const initQuestionPage = () => {
     });
   }
 
+  // Creating a Correct Answer Banner
+  const correctAnswerBanner = document.createElement('p');
+  correctAnswerBanner.textContent = 'Correct Answer';
+  correctAnswerBanner.style.display = 'none';
+  correctAnswerBanner.className = 'banner-correct';
+  // document.body.appendChild(correctAnswerBanner); // AT THE TOP OF THE PAGE
+  userInterface.appendChild(correctAnswerBanner); // AT THE BOTTOM  OF THE PAGE
+
+  // Creating a Correct Answer Banner
+  const wrongAnswerBanner = document.createElement('p');
+  wrongAnswerBanner.textContent = 'Wrong Answer';
+  wrongAnswerBanner.style.display = 'none';
+  wrongAnswerBanner.className = 'banner-wrong';
+
+  // document.body.appendChild(correctAnswerBanner); // AT THE TOP OF THE PAGE
+  userInterface.appendChild(wrongAnswerBanner); // AT THE BOTTOM  OF THE PAGE
+
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestion);
