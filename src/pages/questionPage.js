@@ -1,11 +1,13 @@
 import {
   ANSWERS_LIST_ID,
+  LINKS_DIV,
   NEXT_QUESTION_BUTTON_ID,
   USER_INTERFACE_ID,
 } from '../constants.js';
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
+import { createLinkElement } from '../views/linkView.js';
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -45,6 +47,7 @@ export const initQuestionPage = () => {
             }
           }
         }
+        answerLinks(currentQuestion);
       }
     }
   }
@@ -53,6 +56,13 @@ export const initQuestionPage = () => {
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestion);
 };
+
+function answerLinks(question) {
+  question.links.forEach((link) => {
+    const answerLink = document.getElementById(LINKS_DIV);
+    return answerLink.appendChild(createLinkElement(link.href, link.text));
+  });
+}
 
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
