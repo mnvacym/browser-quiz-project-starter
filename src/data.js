@@ -29,7 +29,7 @@ export const quizData = {
         },
         {
           text: 'Twitter Logo: What Famous Bird Stands For',
-          href: '#https://www.logaster.com/blog/twitter-logo/',
+          href: 'https://www.logaster.com/blog/twitter-logo/',
         },
       ],
     },

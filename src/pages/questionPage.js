@@ -1,5 +1,6 @@
 import {
   ANSWERS_LIST_ID,
+  LINKS_DIV,
   NEXT_QUESTION_BUTTON_ID,
   USER_INTERFACE_ID,
 } from '../constants.js';
@@ -47,12 +48,9 @@ export const initQuestionPage = () => {
             }
           }
         }
-        currentQuestion.links.forEach((link) => {
-          console.log(link);
-          console.log(createLinkElement(link.href, link.text));
-          document
-            .getElementById('links')
-            .appendChild(createLinkElement(link.href, link.text));
+        const answerLinks = currentQuestion.links.forEach((link) => {
+          const answerLink = document.getElementById(LINKS_DIV);
+          answerLink.appendChild(createLinkElement(link.href, link.text));
         });
       }
     }

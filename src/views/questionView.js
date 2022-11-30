@@ -1,6 +1,6 @@
 import { ANSWERS_LIST_ID } from '../constants.js';
 import { NEXT_QUESTION_BUTTON_ID } from '../constants.js';
-
+import { LINKS_DIV } from '../constants.js';
 /**
  * Create a full question element
  * @returns {Element}
@@ -15,7 +15,7 @@ export const createQuestionElement = (question) => {
     <ul id="${ANSWERS_LIST_ID}">
     </ul>
 
-    <div id="links"></div>
+    <div id="${LINKS_DIV}"></div>
     
     <button id="${NEXT_QUESTION_BUTTON_ID}">
       Next question
