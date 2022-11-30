@@ -26,7 +26,6 @@ export const initQuestionPage = () => {
     answersListElement.appendChild(answerElement);
     answerElement.addEventListener('click', showAnswer);
 
-    // eslint-disable-next-line no-inner-declarations
     function showAnswer() {
       //check if answer is not given before
       if (currentQuestion.selected !== true) {
@@ -48,10 +47,7 @@ export const initQuestionPage = () => {
             }
           }
         }
-        const answerLinks = currentQuestion.links.forEach((link) => {
-          const answerLink = document.getElementById(LINKS_DIV);
-          answerLink.appendChild(createLinkElement(link.href, link.text));
-        });
+        answerLinks(currentQuestion);
       }
     }
   }
@@ -60,6 +56,13 @@ export const initQuestionPage = () => {
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestion);
 };
+
+function answerLinks(question) {
+  question.links.forEach((link) => {
+    const answerLink = document.getElementById(LINKS_DIV);
+    return answerLink.appendChild(createLinkElement(link.href, link.text));
+  });
+}
 
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
