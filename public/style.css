@@ -95,17 +95,17 @@ a {
 @media only screen and (max-width: 970px) {
   h1 {
     margin-top: 2rem;
-   
+
     font-size: 1.5rem;
   }
-  .centered{
+  .centered {
     top: 45%;
     width: 80%;
   }
-  button{
+  button {
     font-size: 1.5rem;
   }
-  ul{
+  ul {
     font-size: 1.3rem;
   }
 }
