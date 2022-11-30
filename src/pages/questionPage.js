@@ -23,7 +23,9 @@ export const initQuestionPage = () => {
   for (const [key, answerText] of Object.entries(currentQuestion.answers)) {
     const answerElement = createAnswerElement(key, answerText);
     answersListElement.appendChild(answerElement);
-    answerElement.addEventListener('click', ()=>{showAnswer(answerElement,key,currentQuestion)});
+    answerElement.addEventListener('click', () => {
+      showAnswer(answerElement, key, currentQuestion);
+    });
   }
 
   document
