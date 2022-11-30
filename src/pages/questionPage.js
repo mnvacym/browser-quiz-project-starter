@@ -6,7 +6,7 @@ import {
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
-import { appendLinks } from '../utils/answerLinksUtil.js';
+import { appendLinks } from '../utils/appendLinksUtil.js';
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
