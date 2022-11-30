@@ -1,6 +1,6 @@
-import { appendLinks } from '../utils/appendLinksUtil.js';
+import { appendLinks } from './appendLinksUtil.js';
 
-export const showAnswer = (answerElement, key, currentQuestion) => {
+export const showCorrectAnswer = (answerElement, key, currentQuestion) => {
   //check if answer is not given before
   if (currentQuestion.selected !== true) {
     currentQuestion.selected = true;

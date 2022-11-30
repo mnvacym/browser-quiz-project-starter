@@ -6,7 +6,7 @@ import {
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
-import { showAnswer } from '../utils/showAnswerUtil.js';
+import { showCorrectAnswer } from '../utils/showCorrectAnswerUtil.js';
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -24,7 +24,7 @@ export const initQuestionPage = () => {
     const answerElement = createAnswerElement(key, answerText);
     answersListElement.appendChild(answerElement);
     answerElement.addEventListener('click', () => {
-      showAnswer(answerElement, key, currentQuestion);
+      showCorrectAnswer(answerElement, key, currentQuestion);
     });
   }
 
