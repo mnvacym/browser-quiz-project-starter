@@ -30,6 +30,7 @@ export const initQuestionPage = () => {
     answersListElement.appendChild(answerElement);
     answerElement.addEventListener('click', () => {
       showCorrectAnswer(answerElement, key, currentQuestion);
+      sessionStorage.setItem('quizDataSaved', JSON.stringify(quizData));
     });
   }
 

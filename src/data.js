@@ -9,7 +9,7 @@
     not by your listeners
 */
 
-export const quizData = {
+export const quizData = JSON.parse(sessionStorage.getItem('quizDataSaved')) || {
   currentQuestionIndex: 0,
   // the questions in the quiz
   questions: [
