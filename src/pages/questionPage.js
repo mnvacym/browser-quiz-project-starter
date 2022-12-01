@@ -27,14 +27,24 @@ export const initQuestionPage = () => {
       showCorrectAnswer(answerElement, key, currentQuestion);
     });
   }
-
+  const nextQuestionCheck = () => {
+    const links = document.getElementById('links-div').childNodes.length;
+    if (links === 0) {
+      for (const [key, answerText] of Object.entries(currentQuestion.correct)) {
+        const answerElement = createAnswerElement(key, answerText);
+        showCorrectAnswer(answerElement, key, currentQuestion);
+      }
+    } else {
+      nextQuestion();
+    }
+  };
+  
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
-    .addEventListener('click', nextQuestion);
+    .addEventListener('click', nextQuestionCheck);
 };
 
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
-
   initQuestionPage();
 };
