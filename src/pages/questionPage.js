@@ -38,7 +38,7 @@ export const initQuestionPage = () => {
       nextQuestion();
     }
   };
-  
+
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestionCheck);
