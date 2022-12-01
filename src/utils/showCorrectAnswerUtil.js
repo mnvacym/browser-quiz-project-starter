@@ -1,22 +1,22 @@
 import { appendLinks } from './appendLinksUtil.js';
+import { newScoring } from '../utils/scoring.js';
+import { correctBanner } from '../utils/Banner.js';
+import { wrongBanner } from '../utils/Banner.js';
 
 export const showCorrectAnswer = (answerElement, key, currentQuestion) => {
-  //check if answer is not given before
   if (currentQuestion.selected !== true) {
     currentQuestion.selected = true;
     if (currentQuestion.correct === key) {
-      // 1. if the answer is Correct, the answer will turn Green
       answerElement.className = 'correct';
+      correctBanner();
+      newScoring();
     } else {
-      // 1. if the answer is Wrong, the answer will turn Red
       answerElement.className = 'wrong';
+      wrongBanner();
 
-      //get all li elements
       const liElements = document.getElementsByTagName('li');
       for (const element of liElements) {
-        // check which one is correct answer
         if (element.id == currentQuestion.correct) {
-          // show the correct answer
           element.className = 'correct';
         }
       }

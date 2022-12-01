@@ -6,11 +6,8 @@ import {
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
-import { appendLinks } from '../utils/appendLinksUtil.js';
+// import { appendLinks } from '../utils/appendLinksUtil.js';
 import { scoring } from '../utils/scoring.js';
-import { newScoring } from '../utils/scoring.js';
-import { correctBanner } from '../utils/Banner.js';
-import { wrongBanner } from '../utils/Banner.js';
 import { showCorrectAnswer } from '../utils/showCorrectAnswerUtil.js';
 
 scoring();
@@ -33,31 +30,6 @@ export const initQuestionPage = () => {
     answerElement.addEventListener('click', () => {
       showCorrectAnswer(answerElement, key, currentQuestion);
     });
-
-    // function showAnswer() {
-    //   if (currentQuestion.selected !== true) {
-    //     currentQuestion.selected = true;
-    //     if (currentQuestion.correct === key) {
-    //       answerElement.className = 'correct';
-    //       correctBanner();
-    //       newScoring();
-    //     } else {
-    //       answerElement.className = 'wrong';
-    //       wrongBanner();
-
-    //       //get all li elements
-    //       const liElements = document.getElementsByTagName('li');
-    //       for (const element of liElements) {
-    //         // check which one is correct answer
-    //         if (element.id == currentQuestion.correct) {
-    //           // show the correct answer
-    //           element.className = 'correct';
-    //         }
-    //       }
-    //     }
-    //     appendLinks(currentQuestion);
-    //   }
-    // }
   }
 
   document
