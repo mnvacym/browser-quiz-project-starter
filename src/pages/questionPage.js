@@ -8,6 +8,16 @@ import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { showCorrectAnswer } from '../utils/showCorrectAnswerUtil.js';
 
+///>>> SCORING MAIN
+let scorePerQuestion = 0;
+console.log(scorePerQuestion);
+const score = document.createElement('p');
+score.textContent = 'Your Score is: ' + scorePerQuestion;
+score.id = 'score';
+document.body.appendChild(score);
+score.className = 'banner-correct'; // TO STYLE IT LATER
+///<<<
+
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
   userInterface.innerHTML = '';
@@ -28,20 +38,19 @@ export const initQuestionPage = () => {
     });
   }
 
-  // Creating a Correct Answer Banner
+  ///>>> Creating a Correct Answer Banner
   const correctAnswerBanner = document.createElement('p');
   correctAnswerBanner.textContent = 'Correct Answer';
   correctAnswerBanner.style.display = 'none';
-  correctAnswerBanner.className = 'banner-correct';
+  correctAnswerBanner.className = 'banner-correct'; // TO STYLE IT LATER
   // document.body.appendChild(correctAnswerBanner); // AT THE TOP OF THE PAGE
   userInterface.appendChild(correctAnswerBanner); // AT THE BOTTOM  OF THE PAGE
 
-  // Creating a Correct Answer Banner
+  ///>>> Creating a Correct Answer Banner
   const wrongAnswerBanner = document.createElement('p');
   wrongAnswerBanner.textContent = 'Wrong Answer';
   wrongAnswerBanner.style.display = 'none';
-  wrongAnswerBanner.className = 'banner-wrong';
-
+  wrongAnswerBanner.className = 'banner-wrong'; // TO STYLE IT LATER
   // document.body.appendChild(correctAnswerBanner); // AT THE TOP OF THE PAGE
   userInterface.appendChild(wrongAnswerBanner); // AT THE BOTTOM  OF THE PAGE
 
