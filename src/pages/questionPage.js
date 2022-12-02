@@ -7,6 +7,7 @@ import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { showCorrectAnswer } from '../utils/showCorrectAnswerUtil.js';
+import { nextQuestionCheck } from '../utils/nextQuestionCheckUtil.js';
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -27,24 +28,13 @@ export const initQuestionPage = () => {
       showCorrectAnswer(answerElement, key, currentQuestion);
     });
   }
-  const nextQuestionCheck = () => {
-    const links = document.getElementById('links-div').childNodes.length;
-    if (links === 0) {
-      for (const [key, answerText] of Object.entries(currentQuestion.correct)) {
-        const answerElement = createAnswerElement(key, answerText);
-        showCorrectAnswer(answerElement, key, currentQuestion);
-      }
-    } else {
-      nextQuestion();
-    }
-  };
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestionCheck);
 };
 
-const nextQuestion = () => {
+export const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
   initQuestionPage();
 };
