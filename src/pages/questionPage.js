@@ -31,10 +31,10 @@ export const initQuestionPage = () => {
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
-    .addEventListener('click', nextQuestionCheck);
+    .addEventListener('click', () => nextQuestionCheck(nextQuestion));
 };
 
-export const nextQuestion = () => {
+const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
   initQuestionPage();
 };
