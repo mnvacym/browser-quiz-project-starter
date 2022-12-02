@@ -4,14 +4,16 @@ import { correctBanner } from '../utils/Banner.js';
 import { wrongBanner } from '../utils/Banner.js';
 
 export const showCorrectAnswer = (answerElement, key, currentQuestion) => {
-  if (currentQuestion.selected !== true) {
-    currentQuestion.selected = true;
+  //check if answer is not given before
+  if (currentQuestion.selected === null) {
     if (currentQuestion.correct === key) {
       answerElement.className = 'correct';
+      currentQuestion.selected = key;
       correctBanner();
       newScoring();
     } else {
       answerElement.className = 'wrong';
+      currentQuestion.selected = key;
       wrongBanner();
 
       const liElements = document.getElementsByTagName('li');
