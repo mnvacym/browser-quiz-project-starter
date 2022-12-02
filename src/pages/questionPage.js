@@ -10,6 +10,7 @@ import { appendLinks } from '../utils/appendLinksUtil.js';
 import { scoring } from '../utils/scoring.js';
 import { showCorrectAnswer } from '../utils/showCorrectAnswerUtil.js';
 import { setQuizData, getQuizData } from '../utils/sessionStorage.js';
+import { nextQuestionCheck } from '../utils/nextQuestionCheckUtil.js';
 
 scoring();
 
@@ -24,7 +25,11 @@ export const initQuestionPage = () => {
   userInterface.appendChild(questionElement);
 
   const answersListElement = document.getElementById(ANSWERS_LIST_ID);
-
+  if (!!getQuizData() && !!currentQuestion.selected) {
+    appendLinks(currentQuestion);
+    const btn = document.getElementById(NEXT_QUESTION_BUTTON_ID);
+    btn.textContent = 'Next question';
+  }
   for (const [key, answerText] of Object.entries(currentQuestion.answers)) {
     const answerElement = createAnswerElement(key, answerText);
 
@@ -45,7 +50,6 @@ export const initQuestionPage = () => {
         answerElement.className = 'correct';
       }
     }
-
     answersListElement.appendChild(answerElement);
     answerElement.addEventListener('click', () => {
       showCorrectAnswer(answerElement, key, currentQuestion);
