@@ -1,9 +1,11 @@
-import { quizData } from './data.js';
 import { initWelcomePage } from './pages/welcomePage.js';
 import { initQuestionPage } from './pages/questionPage.js';
+import { getQuizData } from './utils/sessionStorage.js';
+
+const savedQuizData = getQuizData();
 
 const loadApp = () => {
-  if (quizData.currentQuestionIndex !== 0) {
+  if (!!savedQuizData) {
     initQuestionPage();
   } else {
     initWelcomePage();

@@ -8,12 +8,12 @@ export const showCorrectAnswer = (answerElement, key, currentQuestion) => {
   if (currentQuestion.selected === null) {
     if (currentQuestion.correct === key) {
       answerElement.className = 'correct';
-      currentQuestion.selected = true;
+      currentQuestion.selected = key;
       correctBanner();
       newScoring();
     } else {
       answerElement.className = 'wrong';
-      currentQuestion.selected = false;
+      currentQuestion.selected = key;
       wrongBanner();
 
       const liElements = document.getElementsByTagName('li');

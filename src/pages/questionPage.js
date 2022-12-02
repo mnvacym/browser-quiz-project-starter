@@ -9,7 +9,7 @@ import { quizData } from '../data.js';
 import { appendLinks } from '../utils/appendLinksUtil.js';
 import { scoring } from '../utils/scoring.js';
 import { showCorrectAnswer } from '../utils/showCorrectAnswerUtil.js';
-import { nextQuestionCheck } from '../utils/nextQuestionCheckUtil.js';
+import { setQuizData, getQuizData } from '../utils/sessionStorage.js';
 
 scoring();
 
@@ -23,29 +23,33 @@ export const initQuestionPage = () => {
 
   userInterface.appendChild(questionElement);
 
-  if (currentQuestion.selected === true) {
-    document.querySelector('h1').style.color = 'green';
-  } else if (currentQuestion.selected === false) {
-    document.querySelector('h1').style.color = 'red';
-  }
-
   const answersListElement = document.getElementById(ANSWERS_LIST_ID);
 
   for (const [key, answerText] of Object.entries(currentQuestion.answers)) {
     const answerElement = createAnswerElement(key, answerText);
+
+    if (!!getQuizData() && !!currentQuestion.selected) {
+      if (
+        key === currentQuestion.selected &&
+        currentQuestion.selected === currentQuestion.correct
+      ) {
+        answerElement.className = 'correct';
+      }
+      if (
+        key === currentQuestion.selected &&
+        currentQuestion.selected !== currentQuestion.correct
+      ) {
+        answerElement.className = 'wrong';
+      }
+      if (key === currentQuestion.correct) {
+        answerElement.className = 'correct';
+      }
+    }
+
     answersListElement.appendChild(answerElement);
     answerElement.addEventListener('click', () => {
-      if (currentQuestion.selected === true) {
-        alert(
-          'You already answered this question! ANSWER WAS CORRECT. Please answer the next question.'
-        );
-      } else if (currentQuestion.selected === false) {
-        alert(
-          'You already answered this question! ANSWER WAS WRONG. Please answer the next question.'
-        );
-      }
       showCorrectAnswer(answerElement, key, currentQuestion);
-      sessionStorage.setItem('quizDataSaved', JSON.stringify(quizData));
+      setQuizData(quizData);
     });
   }
 
@@ -56,5 +60,6 @@ export const initQuestionPage = () => {
 
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
+  setQuizData(quizData);
   initQuestionPage();
 };

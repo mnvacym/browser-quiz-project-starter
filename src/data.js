@@ -1,3 +1,4 @@
+import { getQuizData } from './utils/sessionStorage.js';
 /* Program Data
 
   in this file you can declare variables to store important data for your program
@@ -9,7 +10,7 @@
     not by your listeners
 */
 
-export const quizData = JSON.parse(sessionStorage.getItem('quizDataSaved')) || {
+export const quizData = getQuizData() || {
   currentQuestionIndex: 0,
   // the questions in the quiz
   questions: [
