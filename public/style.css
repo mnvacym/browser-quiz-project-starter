@@ -24,7 +24,7 @@ body {
 }
 
 h1 {
-  margin-bottom: 2rem;
+  margin: 5rem 0 2rem 0;
   color: #455eb5;
   font-size: 2rem;
 }
@@ -43,11 +43,12 @@ button {
   cursor: pointer;
   font-size: 2rem;
   font-weight: 500;
-  height: 3rem;
+  height: 4rem;
   padding: 0 1.7rem;
   text-align: center;
   transition: all 0.5s;
   margin: 5rem 0;
+  width: 50%;
 }
 
 ul {
@@ -94,18 +95,58 @@ a {
 }
 
 .wrong {
-  text-decoration: line-through;
   color: #ea4535;
 }
 
-/* Media Queries */
+.banner-correct {
+  position: absolute;
+  width: 100%;
+  margin-top: 2rem;
+  background-color: #4fa854;
+  color: white;
+  border: solid #4fa854 2px;
+  border-radius: 0.7rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
 
+.banner-wrong {
+  position: absolute;
+  width: 100%;
+  margin-top: 2rem;
+  background-color: #ea4535;
+  color: white;
+  border: solid #ea4535 2px;
+  border-radius: 0.7rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#score {
+  background-image: linear-gradient(
+    92.88deg,
+    #455eb5 9.16%,
+    #5643cc 43.89%,
+    #673fd7 64.72%
+  );
+  color: white;
+  padding: 0.2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  width: 100%;
+}
+
+/* Media Queries */
 @media only screen and (max-width: 970px) {
   h1 {
-    margin-top: 2rem;
-
     font-size: 1.5rem;
   }
+
+  #user-interface {
+    margin-top: 5rem;
+  }
+
   .centered {
     top: 45%;
     width: 80%;
@@ -116,26 +157,4 @@ a {
   ul {
     font-size: 1.3rem;
   }
-}
-
-.banner-correct {
-  background-color: #4fa854;
-  color: white;
-  border: solid #4fa854 2px;
-  border-radius: 0.7rem;
-  padding: 1rem;
-  margin: 1rem;
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-.banner-wrong {
-  background-color: #ea4535;
-  color: white;
-  border: solid #ea4535 2px;
-  border-radius: 0.7rem;
-  padding: 1rem;
-  margin: 1rem;
-  font-size: 2rem;
-  font-weight: 500;
 }
