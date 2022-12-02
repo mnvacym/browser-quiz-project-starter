@@ -5,6 +5,8 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-image: url('../public/images/bgrey.jpg');
+  background-repeat: repeat;
 }
 
 .centered {
@@ -61,6 +63,7 @@ button {
   padding: 0 1.7rem;
   text-align: center;
   transition: all 0.5s;
+  margin: 5rem 0;
 }
 
 ul {
@@ -73,6 +76,7 @@ ul {
 li {
   border: solid #333333 2px;
   border-radius: 0.7rem;
+  background-color: white;
   padding: 1rem;
   margin: 1rem;
 }
@@ -86,15 +90,19 @@ li:hover {
 }
 
 a {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  color: #535353;
+  text-decoration: none;
 }
 
 #links-div {
-  margin: 3rem 0;
+  text-align: left;
+  padding: 0 2rem 0.5rem 2rem;
+  position: absolute;
 }
 
 #links-div > * {
-  margin: 1rem 0;
+  margin: 0.5rem 0 0 0;
 }
 
 .correct {
@@ -124,4 +132,26 @@ a {
   ul {
     font-size: 1.3rem;
   }
+}
+
+.banner-correct {
+  background-color: #4fa854;
+  color: white;
+  border: solid #4fa854 2px;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.banner-wrong {
+  background-color: #ea4535;
+  color: white;
+  border: solid #ea4535 2px;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
 }
