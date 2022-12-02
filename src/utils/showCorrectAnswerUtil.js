@@ -22,5 +22,7 @@ export const showCorrectAnswer = (answerElement, key, currentQuestion) => {
       }
     }
     appendLinks(currentQuestion);
+    const btn = document.getElementById('next-question-button');
+    btn.textContent = 'Next question';
   }
 };

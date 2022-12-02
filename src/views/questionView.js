@@ -18,7 +18,7 @@ export const createQuestionElement = (question) => {
     <div id="${LINKS_DIV}"></div>
     
     <button id="${NEXT_QUESTION_BUTTON_ID}">
-      Next question
+      Show answer
     </button>
   `;
 
