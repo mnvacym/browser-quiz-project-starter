@@ -6,7 +6,7 @@ import {
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
-// import { appendLinks } from '../utils/appendLinksUtil.js';
+import { appendLinks } from '../utils/appendLinksUtil.js';
 import { scoring } from '../utils/scoring.js';
 import { showCorrectAnswer } from '../utils/showCorrectAnswerUtil.js';
 
