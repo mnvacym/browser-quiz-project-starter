@@ -109,3 +109,25 @@ a {
     font-size: 1.3rem;
   }
 }
+
+.banner-correct {
+  background-color: #4fa854;
+  color: white;
+  border: solid #4fa854 2px;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.banner-wrong {
+  background-color: #ea4535;
+  color: white;
+  border: solid #ea4535 2px;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
