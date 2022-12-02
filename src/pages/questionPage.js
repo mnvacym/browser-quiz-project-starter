@@ -14,6 +14,16 @@ import { nextQuestionCheck } from '../utils/nextQuestionCheckUtil.js';
 
 scoring();
 
+///>>>REMAINING QUESTIONS
+let remainingQuestions = 10;
+
+const questions = document.createElement('p');
+questions.textContent = 'Remaining Questions : ' + remainingQuestions;
+questions.id = 'remaining-questions';
+document.body.appendChild(questions);
+
+///<<< REMAINING QUESTIONS
+
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
   userInterface.innerHTML = '';
@@ -56,6 +66,15 @@ export const initQuestionPage = () => {
       setQuizData(quizData);
     });
   }
+
+  ///>>>REMAINING QUESTIONS
+  remainingQuestions = 10 - quizData.currentQuestionIndex;
+  const UpdateRemainingQuestions = document.getElementById(
+    'remaining-questions'
+  );
+  UpdateRemainingQuestions.innerHTML =
+    'Remaining Questions : ' + remainingQuestions;
+  ///>>>REMAINING QUESTIONS
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
