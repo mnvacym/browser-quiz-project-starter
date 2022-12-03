@@ -43,7 +43,7 @@ button {
   transition: all 0.5s;
   margin: 5rem 0;
   background: #673fd7;
-  background: linear-gradient(0deg, #673fd7 0%, #9f7dfd  100%);
+  background: linear-gradient(0deg, #673fd7 0%, #9f7dfd 100%);
 }
 
 button:hover {
@@ -156,8 +156,8 @@ a {
   width: 2px;
 }
 #start-quiz-button:hover {
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-              -4px -4px 6px 0 rgba(116, 125, 136, .5), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
 }
