@@ -80,12 +80,10 @@ li {
 
 li::first-letter {
   font-weight: bold;
-  
 }
 
 li:hover {
   border: solid #673fd7 2px;
-  
 }
 
 a {
