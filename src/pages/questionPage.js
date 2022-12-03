@@ -11,8 +11,13 @@ import { scoring } from '../utils/scoring.js';
 import { showCorrectAnswer } from '../utils/showCorrectAnswerUtil.js';
 import { setQuizData, getQuizData } from '../utils/sessionStorage.js';
 import { nextQuestionCheck } from '../utils/nextQuestionCheckUtil.js';
+import {
+  settingRemainingQuestion,
+  countingRemainingQuestions,
+} from '../utils/remainingQuestions.js';
 
 scoring();
+settingRemainingQuestion();
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -56,6 +61,8 @@ export const initQuestionPage = () => {
       setQuizData(quizData);
     });
   }
+
+  countingRemainingQuestions();
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
