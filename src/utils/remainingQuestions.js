@@ -10,7 +10,8 @@ export function settingRemainingQuestion() {
 }
 
 export function countingRemainingQuestions() {
-  remainingQuestions = 10 - quizData.currentQuestionIndex;
+  remainingQuestions =
+    quizData.questions.length - quizData.currentQuestionIndex;
   const UpdateRemainingQuestions = document.getElementById(
     'remaining-questions'
   );
