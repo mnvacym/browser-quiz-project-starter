@@ -5,17 +5,17 @@ export function lastPage() {
   let correctAnswers = 0;
   let wrongAnswers = 0;
   let skippedAnswers = 0;
-  for (let finalQuestions of getQuizData().questions) {
-    if (finalQuestions.correct === finalQuestions.selected) {
+  for (let finalQuestion of getQuizData().questions) {
+    if (finalQuestion.correct === finalQuestion.selected) {
       correctAnswers += 1;
     }
     if (
-      finalQuestions.correct !== finalQuestions.selected &&
-      finalQuestions.selected != 0
+      finalQuestion.correct !== finalQuestion.selected &&
+      finalQuestion.selected != 0
     ) {
       wrongAnswers += 1;
     }
-    if (finalQuestions.selected == 0) {
+    if (finalQuestion.selected == 0) {
       skippedAnswers += 1;
     }
   }

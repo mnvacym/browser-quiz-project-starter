@@ -72,7 +72,7 @@ export const initQuestionPage = () => {
 
 const nextQuestion = () => {
   //>>>LAST PAGE >>>
-  if (quizData.currentQuestionIndex < 9) {
+  if (quizData.currentQuestionIndex < quizData.questions.length - 1) {
     quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
     setQuizData(quizData);
     initQuestionPage();
