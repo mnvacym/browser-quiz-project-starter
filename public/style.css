@@ -23,7 +23,7 @@ body {
   overflow: auto;
 }
 
-.transform {
+/* .slide-it {
   -webkit-transition: all 2s ease;  
   -moz-transition: all 2s ease;  
   -o-transition: all 2s ease;  
@@ -31,11 +31,11 @@ body {
   transition: all 2s ease;
 }
 
-.transform-active {
+.slide-it-active {
   background-color: #45CEE0;
   height: 200px;
   width: 200px;
-}
+} */
 
 h1 {
   margin-bottom: 2rem;
@@ -72,21 +72,34 @@ ul {
   color: #333333;
   text-align: left;
 }
-
+@keyframes slideMe {
+  0% {
+    transform: translateX(-100%);
+    border: solid rgb(19, 235, 84) 0px;
+  }
+  100% {
+    transform: translateX(0);
+    border: solid #333333 2px;
+  }
+}
 li {
   border: solid #333333 2px;
   border-radius: 0.7rem;
   background-color: white;
   padding: 1rem;
   margin: 1rem;
+
+  animation: 1s ease-out 0s 1 slideMe;
 }
 
 li::first-letter {
   font-weight: bold;
+  
 }
 
 li:hover {
   border: solid #673fd7 2px;
+  
 }
 
 a {
