@@ -23,27 +23,11 @@ body {
   overflow: auto;
 }
 
-/* .slide-it {
-  -webkit-transition: all 2s ease;  
-  -moz-transition: all 2s ease;  
-  -o-transition: all 2s ease;  
-  -ms-transition: all 2s ease;  
-  transition: all 2s ease;
-}
-
-.slide-it-active {
-  background-color: #45CEE0;
-  height: 200px;
-  width: 200px;
-} */
-
 h1 {
   margin-bottom: 2rem;
   color: #455eb5;
   font-size: 2rem;
 }
-
-
 
 button {
   background-image: linear-gradient(
@@ -75,11 +59,13 @@ ul {
 @keyframes slideMe {
   0% {
     transform: translateX(-100%);
-    border: solid rgb(19, 235, 84) 0px;
+    border: solid rgb(19, 235, 84) 4px;
+    background-color: #333333;
   }
   100% {
     transform: translateX(0);
     border: solid #333333 2px;
+    background-color: #fff;
   }
 }
 li {
