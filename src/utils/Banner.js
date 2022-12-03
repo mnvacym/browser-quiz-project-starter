@@ -4,14 +4,14 @@ const userInterface = document.getElementById(USER_INTERFACE_ID);
 
 export function correctBanner() {
   const correctAnswerBanner = document.createElement('p');
-  correctAnswerBanner.textContent = 'Correct Answer';
-  correctAnswerBanner.className = 'banner-correct'; // TO STYLE IT LATER
-  userInterface.appendChild(correctAnswerBanner);
+  correctAnswerBanner.textContent = 'Correct answer';
+  correctAnswerBanner.className = 'banner-correct';
+  userInterface.prepend(correctAnswerBanner);
 }
 
 export function wrongBanner() {
   const wrongAnswerBanner = document.createElement('p');
-  wrongAnswerBanner.textContent = 'Wrong Answer';
-  wrongAnswerBanner.className = 'banner-wrong'; // TO STYLE IT LATER
-  userInterface.appendChild(wrongAnswerBanner); // AT THE BOTTOM  OF THE PAGE
+  wrongAnswerBanner.textContent = 'Wrong answer';
+  wrongAnswerBanner.className = 'banner-wrong';
+  userInterface.prepend(wrongAnswerBanner); // AT THE TOP OF THE PAGE
 }
