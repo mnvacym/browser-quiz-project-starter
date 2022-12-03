@@ -11,18 +11,13 @@ import { scoring } from '../utils/scoring.js';
 import { showCorrectAnswer } from '../utils/showCorrectAnswerUtil.js';
 import { setQuizData, getQuizData } from '../utils/sessionStorage.js';
 import { nextQuestionCheck } from '../utils/nextQuestionCheckUtil.js';
+import {
+  settingRemainingQuestion,
+  countingRemainingQuestions,
+} from '../utils/remainingQuestions.js';
 
 scoring();
-
-///>>>REMAINING QUESTIONS
-let remainingQuestions = 10;
-
-const questions = document.createElement('p');
-questions.textContent = 'Remaining Questions : ' + remainingQuestions;
-questions.id = 'remaining-questions';
-document.body.appendChild(questions);
-
-///<<< REMAINING QUESTIONS
+settingRemainingQuestion();
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -67,14 +62,7 @@ export const initQuestionPage = () => {
     });
   }
 
-  ///>>>REMAINING QUESTIONS
-  remainingQuestions = 10 - quizData.currentQuestionIndex;
-  const UpdateRemainingQuestions = document.getElementById(
-    'remaining-questions'
-  );
-  UpdateRemainingQuestions.innerHTML =
-    'Remaining Questions : ' + remainingQuestions;
-  ///>>>REMAINING QUESTIONS
+  countingRemainingQuestions();
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
