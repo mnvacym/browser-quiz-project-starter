@@ -1,7 +1,6 @@
 import { appendLinks } from './appendLinksUtil.js';
 import { newScoring } from '../utils/scoring.js';
-import { correctBanner } from '../utils/Banner.js';
-import { wrongBanner } from '../utils/Banner.js';
+import { correctBanner, wrongBanner } from '../utils/Banner.js';
 
 export const showCorrectAnswer = (answerElement, key, currentQuestion) => {
   //check if answer is not given before
@@ -14,7 +13,9 @@ export const showCorrectAnswer = (answerElement, key, currentQuestion) => {
     } else {
       answerElement.className = 'wrong';
       currentQuestion.selected = key;
-      wrongBanner();
+      if (currentQuestion.selected !== '0') {
+        wrongBanner();
+      }
 
       const liElements = document.getElementsByTagName('li');
       for (const element of liElements) {
