@@ -70,7 +70,56 @@ export const initQuestionPage = () => {
 };
 
 const nextQuestion = () => {
-  quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
-  setQuizData(quizData);
-  initQuestionPage();
+  //>>>LAST PAGE >>>
+  if (quizData.currentQuestionIndex < 9) {
+    quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
+    setQuizData(quizData);
+    initQuestionPage();
+  } else {
+    lastPage();
+  }
+
+  //>>>LAST PAGE >>>
 };
+
+function lastPage() {
+  document.body.innerHTML = '';
+
+  // console.log(getQuizData());
+  let correctAnswers = 0;
+  let wrongAnswers = 0;
+  let skippedAnswers = 0;
+  for (let finalQuestions of getQuizData().questions) {
+    // console.log(finalQuestions.text);
+    // console.log(finalQuestions.correct);
+    // console.log(finalQuestions.selected);
+    if (finalQuestions.correct === finalQuestions.selected) {
+      // let correctAnswerReference = finalQuestions.correct;
+      console.log(finalQuestions.text);
+      // console.log(correctAnswerReference);
+      // console.log(finalQuestions.answers.correctAnswerReference);
+      correctAnswers += 1;
+    }
+    if (
+      finalQuestions.correct !== finalQuestions.selected &&
+      finalQuestions.selected != 0
+    ) {
+      wrongAnswers += 1;
+    }
+    if (finalQuestions.selected == 0) {
+      skippedAnswers += 1;
+    }
+  }
+
+  const addCorrectAnswer = document.createElement('p');
+  addCorrectAnswer.textContent = 'Correct Answers = ' + correctAnswers;
+  document.body.appendChild(addCorrectAnswer);
+
+  const addWrongAnswer = document.createElement('p');
+  addWrongAnswer.textContent = 'Wrong Answers = ' + wrongAnswers;
+  document.body.appendChild(addWrongAnswer);
+
+  const addSkippedAnswer = document.createElement('p');
+  addSkippedAnswer.textContent = 'Skipped Answers = ' + skippedAnswers;
+  document.body.appendChild(addSkippedAnswer);
+}
