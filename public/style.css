@@ -9,6 +9,10 @@ body {
   background-repeat: repeat;
 }
 
+#quiz {
+  width: 100%;
+}
+
 .centered {
   position: fixed;
   top: 50%;
@@ -61,7 +65,7 @@ ul {
 @keyframes slideMe {
   0% {
     transform: translateX(-100%);
-    border: solid rgb(19, 235, 84) 4px;
+    border: solid #8d66f8;
     background-color: #333333;
   }
   100% {
@@ -137,18 +141,26 @@ a {
 }
 
 #score {
-  background-image: linear-gradient(
-    92.88deg,
-    #455eb5 9.16%,
-    #5643cc 43.89%,
-    #673fd7 64.72%
-  );
+  background: #673fd7;
   color: white;
-  padding: 0.2rem;
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
-  width: 100%;
+  width: 50%;
+  float: right;
+  height: 2.2rem;
+}
+
+#remaining-questions {
+  background: #673fd7;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  width: 50%;
+  bottom: 0;
+  float: left;
+  height: 2.2rem;
 }
 
 /* Media Queries */
@@ -165,11 +177,23 @@ a {
     top: 45%;
     width: 80%;
   }
+
   button {
-    font-size: 1.5rem;
+    width: 80%;
   }
+
   ul {
     font-size: 1.3rem;
+  }
+
+  #remaining-questions {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  #score {
+    padding-top: 0.5rem;
+    font-size: 1rem;
   }
 }
 
