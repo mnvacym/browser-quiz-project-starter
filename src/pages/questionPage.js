@@ -114,12 +114,15 @@ function lastPage() {
   const addCorrectAnswer = document.createElement('p');
   addCorrectAnswer.textContent = 'Correct Answers = ' + correctAnswers;
   document.body.appendChild(addCorrectAnswer);
+  addCorrectAnswer.id = 'score'; //  Style to be adjusted
 
   const addWrongAnswer = document.createElement('p');
   addWrongAnswer.textContent = 'Wrong Answers = ' + wrongAnswers;
   document.body.appendChild(addWrongAnswer);
+  addWrongAnswer.id = 'score'; //  Style to be adjusted
 
   const addSkippedAnswer = document.createElement('p');
   addSkippedAnswer.textContent = 'Skipped Answers = ' + skippedAnswers;
   document.body.appendChild(addSkippedAnswer);
+  addSkippedAnswer.id = 'score'; //  Style to be adjusted
 }
