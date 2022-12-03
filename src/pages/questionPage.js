@@ -15,6 +15,7 @@ import {
   settingRemainingQuestion,
   countingRemainingQuestions,
 } from '../utils/remainingQuestions.js';
+import { lastPage } from '../pages/lastPage.js';
 
 scoring();
 settingRemainingQuestion();
@@ -70,7 +71,13 @@ export const initQuestionPage = () => {
 };
 
 const nextQuestion = () => {
-  quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
-  setQuizData(quizData);
-  initQuestionPage();
+  //>>>LAST PAGE >>>
+  if (quizData.currentQuestionIndex < quizData.questions.length - 1) {
+    quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
+    setQuizData(quizData);
+    initQuestionPage();
+  } else {
+    lastPage();
+  }
+  //<<<LAST PAGE <<<
 };
