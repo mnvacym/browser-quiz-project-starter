@@ -1,12 +1,12 @@
 import { quizData } from '../data.js';
 
-let remainingQuestions = 10;
+let remainingQuestions = quizData.questions.length;
 export function settingRemainingQuestion() {
   const questions = document.createElement('p');
   questions.textContent = 'Remaining Questions : ' + remainingQuestions;
   questions.id = 'remaining-questions';
   document.body.appendChild(questions);
-  questions.className = 'banner-correct'; /// NEED TO FIX STYLING AS IT FITS
+  questions.className = 'banner-correct'; /// NEED TO FIX STYLING AS IT
 }
 
 export function countingRemainingQuestions() {
