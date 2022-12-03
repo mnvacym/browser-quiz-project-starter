@@ -94,10 +94,13 @@ function lastPage() {
     // console.log(finalQuestions.correct);
     // console.log(finalQuestions.selected);
     if (finalQuestions.correct === finalQuestions.selected) {
-      // let correctAnswerReference = finalQuestions.correct;
       console.log(finalQuestions.text);
-      // console.log(correctAnswerReference);
-      // console.log(finalQuestions.answers.correctAnswerReference);
+
+      let correctAnswerReference = finalQuestions.correct;
+      console.log(correctAnswerReference);
+
+      console.log(finalQuestions.answers.correctAnswerReference);
+
       correctAnswers += 1;
     }
     if (
@@ -110,6 +113,12 @@ function lastPage() {
       skippedAnswers += 1;
     }
   }
+
+  const thankYou = document.createElement('p');
+  thankYou.textContent =
+    'Thank you for taking the time to complete this quiz. Here is a Summary: ';
+  document.body.appendChild(thankYou);
+  thankYou.id = 'score';
 
   const addCorrectAnswer = document.createElement('p');
   addCorrectAnswer.textContent = 'Correct Answers = ' + correctAnswers;
