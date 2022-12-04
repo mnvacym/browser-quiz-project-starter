@@ -183,9 +183,7 @@ a {
 }
 
 #restart-button {
-  width: 80%;
-  margin: 30% 10%;
-  text-align: center;
+  margin-left: 30%;
 }
 
 /* Media Queries */
@@ -229,4 +227,5 @@ a {
   #start-quiz-button {
     font-size: 150%;
   }
+
 }
