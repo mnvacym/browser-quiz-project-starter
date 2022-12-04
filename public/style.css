@@ -174,10 +174,6 @@ a {
     width: 80%;
   }
 
-  button {
-    width: 80%;
-  }
-
   ul {
     font-size: 1.3rem;
   }
@@ -202,8 +198,9 @@ a {
   background: #673fd7;
   background: linear-gradient(0deg, #673fd7 0%, #9f7dfd 100%);
   border: none;
-  width: 25rem;
-  height: 7rem;
+  width: 40%;
+  height: 100%;
+  padding: 3% 0 3% 0;
   font-size: 3rem;
   border-radius: 2rem;
 }
