@@ -1,15 +1,15 @@
-let newScore = 0;
+import { quizData } from '../data.js';
+
 export function scoring() {
-  let scorePerQuestion = 0;
   const score = document.createElement('p');
-  score.textContent = 'Your score: ' + scorePerQuestion;
+  score.textContent = 'Your score: ' + quizData.currentScore;
   score.id = 'score';
   document.body.appendChild(score);
 }
 
 export function newScoring() {
-  newScore += 1;
+  quizData.currentScore = quizData.currentScore + 1;
 
   const scoreElement = document.getElementById('score');
-  scoreElement.innerHTML = 'Your score: ' + newScore;
+  scoreElement.innerHTML = 'Your score: ' + quizData.currentScore;
 }

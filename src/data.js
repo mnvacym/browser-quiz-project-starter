@@ -12,6 +12,7 @@ import { getQuizData } from './utils/sessionStorage.js';
 
 export const quizData = getQuizData() || {
   currentQuestionIndex: 0,
+  currentScore: 0,
   // the questions in the quiz
   questions: [
     {

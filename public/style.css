@@ -9,10 +9,6 @@ body {
   background-repeat: repeat;
 }
 
-#quiz {
-  width: 100%;
-}
-
 .centered {
   position: fixed;
   top: 50%;
@@ -194,6 +190,10 @@ a {
   #score {
     padding-top: 0.5rem;
     font-size: 1rem;
+  }
+
+  #quiz {
+    width: 100%;
   }
 }
 
