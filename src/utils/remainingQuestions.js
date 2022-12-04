@@ -3,10 +3,9 @@ import { quizData } from '../data.js';
 let remainingQuestions = quizData.questions.length;
 export function settingRemainingQuestion() {
   const questions = document.createElement('p');
-  questions.textContent = 'Remaining Questions : ' + remainingQuestions;
+  questions.textContent = 'Remaining questions : ' + remainingQuestions;
   questions.id = 'remaining-questions';
   document.body.appendChild(questions);
-  questions.className = 'banner-correct'; /// NEED TO FIX STYLING AS IT
 }
 
 export function countingRemainingQuestions() {
@@ -16,5 +15,5 @@ export function countingRemainingQuestions() {
     'remaining-questions'
   );
   UpdateRemainingQuestions.innerHTML =
-    'Remaining Questions : ' + remainingQuestions;
+    'Remaining questions : ' + remainingQuestions;
 }
