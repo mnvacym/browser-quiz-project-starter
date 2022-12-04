@@ -162,9 +162,31 @@ a {
   height: 2.2rem;
 }
 
+#start-quiz-button {
+  cursor: pointer;
+  background: #673fd7;
+  background: linear-gradient(0deg, #673fd7 0%, #9f7dfd 100%);
+  border: none;
+  width: 40%;
+  height: 100%;
+  padding: 3% 0 3% 0;
+  font-size: 3rem;
+  border-radius: 2rem;
+}
+
+#start-quiz-button:before {
+  height: 0%;
+  width: 2px;
+}
+#start-quiz-button:hover {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
 #restart-button {
-  width: 100%;
-  text-align: center;
+  margin-left: 30%;
 }
 
 /* Media Queries */
@@ -193,32 +215,19 @@ a {
 
   #score {
     padding-top: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    height: 3rem;
   }
 
   #quiz {
     width: 100%;
   }
-}
 
-#start-quiz-button {
-  cursor: pointer;
-  background: #673fd7;
-  background: linear-gradient(0deg, #673fd7 0%, #9f7dfd 100%);
-  border: none;
-  width: 40%;
-  height: 100%;
-  padding: 3% 0 3% 0;
-  font-size: 3rem;
-  border-radius: 2rem;
-}
-#start-quiz-button:before {
-  height: 0%;
-  width: 2px;
-}
-#start-quiz-button:hover {
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
-    -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
-    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+  button {
+    font-size: 150%;
+  }
+
+  #start-quiz-button {
+    font-size: 150%;
+  }
 }
