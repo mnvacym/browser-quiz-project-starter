@@ -77,7 +77,10 @@ li {
   padding: 1rem;
   margin: 1rem;
 
-  animation: 1s ease-out 0s 1 slideMe;
+  /* animation: 1s ease-out 0s 1 slideMe; */
+  animation-name: slideMe;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
 }
 
 li::first-letter {
